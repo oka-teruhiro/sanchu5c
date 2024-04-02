@@ -22,10 +22,10 @@ dependencies:
 
   cupertino_icons: ^1.0.6
   # ■■■■■■■■■動画を再生するために必要なパッケージ■■■■■■■■■
-  video_player: ^2.8.2
-  provider: ^6.1.1
+  video_player: ^2.8.4
+  provider: ^6.1.2
   shared_preferences: ^2.2.2
-  flutter_lints: ^3.0.1
+  flutter_lints: ^3.0.2
 
 
 
@@ -36,7 +36,7 @@ dev_dependencies:
 
   #アプリアイコンを作成するためのコード・ここから（2022.12.25)
   #flutter_launcher_icons: ^0.11.0
-  flutter_native_splash: ^2.3.10
+  flutter_native_splash: ^2.4.0
 
 flutter_icons:
   android: "launcher_icon"
