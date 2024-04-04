@@ -8,6 +8,7 @@ import 'package:sanchu5c/output/output4.dart';
 import 'package:sanchu5c/quiz/quiz_page_001.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'douga/douga_kaisetu2.dart';
 import 'osirase/update.dart';
 
 void main() {
@@ -275,7 +276,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const DougaKaisetu1(),
+                        builder: (context) => const DougaKaisetu2(),
                       ),
                     );
                   },
