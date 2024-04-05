@@ -15,7 +15,7 @@ class _DougaKaisetu2State extends State<DougaKaisetu2> {
   void initState() {
     super.initState();
     // YouTube 動画の URL から動画 ID を取得します
-    String videoId = YoutubePlayer.convertUrlToId('C2Myd-nkzcw') ?? '';
+    String videoId = YoutubePlayer.convertUrlToId('AC3tDFuMCv8') ?? '';
     // YoutubePlayerController を初期化します
     _controller = YoutubePlayerController(
       initialVideoId: videoId,
