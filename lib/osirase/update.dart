@@ -12,6 +12,7 @@ import 'package:sanchu5c/osirase/update4c.dart';
 import 'package:sanchu5c/osirase/update4d.dart';
 import 'package:sanchu5c/osirase/update4e.dart';
 import 'package:sanchu5c/osirase/update5a.dart';
+import 'package:sanchu5c/osirase/update5b.dart';
 
 class Update extends StatelessWidget {
   const Update({super.key});
@@ -34,6 +35,9 @@ class Update extends StatelessWidget {
           Expanded(
             child: ListView(
               children: <Widget>[
+                const Divider(
+                  color: Colors.blue,
+                ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ListTile(
@@ -44,7 +48,7 @@ class Update extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const Update5a(),
+                            builder: (context) => const Update5b(),
                           ));
                     },
                   ),

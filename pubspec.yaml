@@ -4,7 +4,7 @@ description: "三柱推命ver5"
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 
-version: 5.0.8+20
+version: 5.1.0+20
 
 environment:
   sdk: ">=2.17.3 <3.0.0"
@@ -22,7 +22,7 @@ dependencies:
 
   cupertino_icons: ^1.0.6
   # ■■■■■■■■■動画を再生するために必要なパッケージ■■■■■■■■■
-  video_player: ^2.8.5
+  video_player: ^2.8.4
   youtube_player_flutter: ^9.0.0
   #youtube_player_iframe: ^5.1.1
   provider: ^6.1.2
@@ -37,29 +37,35 @@ dev_dependencies:
     sdk: flutter
 
   #アプリアイコンを作成するためのコード・ここから（2022.12.25)
-  #flutter_launcher_icons: ^0.11.0
-  flutter_native_splash: ^2.4.0
+  flutter_launcher_icons: "^0.13.1"
 
-flutter_icons:
+flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
-  image_path: 'images/main/icon_uranai.png'
+  image_path: "assets/icon/icon_uranai_x512.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
   web:
     generate: true
     image_path: "path/to/image.png"
-    background_color: "#hexcode"
-    theme_color: "#hexcode"
+    background_color: "000000"
+    theme_color: "000000"
+    windows:
+      generate: true
+      image_path: "path/to/image.png"
+      icon_size: 48 # min:48, max:256, default: 48
+    macos:
+      generate: true
+      image_path: "path/to/image.png"
+  #flutter_native_splash: ^2.4.0
 
 #アプリアイコンを作成するためのコード・ここまで
 
 #スプラッシュ画面を作成する時下記のコードを使う(2022.12.26)
-
-
-flutter_native_splash:
-  image: images/main/icon_uranai_x512.png
-  color: "000000"
-  android: true
-  ios: true
+#flutter_native_splash:
+#  image: assets/icon/icon_uranai_x512.png
+#  color: "000000"
+#  android: true
+#  ios: true
 #スプラッシュ画面を作成するためのコードここまで
 
 
@@ -83,6 +89,7 @@ flutter:
     - images/main/取説4g.jpg
     - images/main/取説5a.jpg
     - images/main/取説5b.jpg
+    - images/main/取説5c.jpg
     - images/nikkan/甲_大樹.jpg
     - images/nikkan/甲_木陰.jpg
     - images/nikkan/丁_キャンドル.jpg

@@ -221,7 +221,7 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
-          title: const Text('天運三柱推命 ver.5.0.8',
+          title: const Text('天運三柱推命 ver.5.1.0',
               style: TextStyle(
                 color: Colors.pinkAccent,
                 fontWeight: FontWeight.bold,
@@ -252,6 +252,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: 440,
                 decoration: BoxDecoration(
                   color: Colors.tealAccent,
+                 // color: Color(0xFFDC143C),
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
                     color: Colors.blue,
