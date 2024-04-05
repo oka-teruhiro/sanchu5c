@@ -37,6 +37,24 @@ class Update extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: ListTile(
+                    title: const Text('第5.1版　動画をwebへ移動し、アプリ容量が減少しました。'
+                        '（2024.4.5更新）'),
+                    trailing: const Icon(Icons.navigate_next),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Update5a(),
+                          ));
+                    },
+                  ),
+                ),
+                const Divider(
+                  color: Colors.blue,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ListTile(
                     title: const Text('第5.0版　動画で解説を加え、使いやすくしました。'
                         '（2024.2.1更新）'),
                     trailing: const Icon(Icons.navigate_next),
