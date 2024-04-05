@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class DougaKaisetu2 extends StatefulWidget {
-  const DougaKaisetu2({super.key});
+  const DougaKaisetu2({Key? key}) : super(key: key);
 
   @override
   State<DougaKaisetu2> createState() => _DougaKaisetu2State();
@@ -10,7 +10,6 @@ class DougaKaisetu2 extends StatefulWidget {
 
 class _DougaKaisetu2State extends State<DougaKaisetu2> {
   late YoutubePlayerController _controller;
-  bool playSwitch = true;
 
   @override
   void initState() {
@@ -29,6 +28,11 @@ class _DougaKaisetu2State extends State<DougaKaisetu2> {
     _controller.addListener(() {
       if (_controller.value.playerState == PlayerState.ended) {
         // 動画が終了したら元のページに戻ります
+        Navigator.of(context).pop();
+      } else if (_controller.value.duration != null &&
+          _controller.value.position >=
+              _controller.value.duration! - Duration(seconds: 1)) {
+        // 動画が終了1秒前にページを戻ります
         Navigator.of(context).pop();
       }
     });
@@ -84,9 +88,6 @@ class _DougaKaisetu2State extends State<DougaKaisetu2> {
                   onPressed: () {
                     // 動画を一時停止
                     _controller.pause();
-                    setState(() {
-                      playSwitch = !playSwitch;
-                    });
                   },
                   icon: const Icon(Icons.pause),
                 ),
@@ -94,9 +95,6 @@ class _DougaKaisetu2State extends State<DougaKaisetu2> {
                   onPressed: () {
                     // 動画を再生
                     _controller.play();
-                    setState(() {
-                      playSwitch = !playSwitch;
-                    });
                   },
                   icon: const Icon(Icons.play_arrow),
                 ),
@@ -104,9 +102,6 @@ class _DougaKaisetu2State extends State<DougaKaisetu2> {
                   onPressed: () {
                     // 動画を最初から再生
                     _controller.pause();
-                    playSwitch = !playSwitch;
-                    setState(() {});
-                    //despose();
                     Navigator.pop(context);
                   },
                   icon: const Icon(Icons.stop),
