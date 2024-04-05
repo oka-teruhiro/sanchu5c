@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart';
-import 'package:sanchu5c/douga/douga_kaisetu1.dart';
 import 'package:sanchu5c/output/kyou_unsei_page.dart';
 import 'package:sanchu5c/output/output4.dart';
 import 'package:sanchu5c/quiz/quiz_page_001.dart';
@@ -222,7 +221,7 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
-          title: const Text('天運三柱推命 ver.5.0.4',
+          title: const Text('天運三柱推命 ver.5.0.6',
               style: TextStyle(
                 color: Colors.pinkAccent,
                 fontWeight: FontWeight.bold,
