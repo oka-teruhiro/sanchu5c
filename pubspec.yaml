@@ -22,7 +22,7 @@ dependencies:
 
   cupertino_icons: ^1.0.6
   # ■■■■■■■■■動画を再生するために必要なパッケージ■■■■■■■■■
-  video_player: ^2.8.4
+  video_player: ^2.8.5
   youtube_player_flutter: ^9.0.0
   #youtube_player_iframe: ^5.1.1
   provider: ^6.1.2
