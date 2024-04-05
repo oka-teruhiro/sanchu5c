@@ -29,11 +29,6 @@ class _DougaKaisetu2State extends State<DougaKaisetu2> {
       if (_controller.value.playerState == PlayerState.ended) {
         // 動画が終了したら元のページに戻ります
         Navigator.of(context).pop();
-      } else if (_controller.value.duration != null &&
-          _controller.value.position >=
-              _controller.value.duration! - Duration(seconds: 1)) {
-        // 動画が終了1秒前にページを戻ります
-        Navigator.of(context).pop();
       }
     });
   }
